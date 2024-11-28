@@ -1,0 +1,238 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ebedf5;
+    color:#0b0e18;
+}
+
+
+.g-header {
+    background-color: #2e3d60;
+    font-family: 'Raleway';
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    color:#e6e8ec;
+    position: sticky;
+    top: 0; /* Sticks the navbar at the top of the viewport */
+    z-index: 1000; /* Ensures the navbar is above other content */
+    width: 100%; /* Optional: makes the navbar take up the full width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better visibility */
+}
+
+.p-header-nav {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.p-header-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+    .header-link {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .header-link:hover {
+        text-decoration: underline;
+    }
+    
+}
+
+.s-main-content {
+    font-family: 'Playfair Display';
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background:#c8a7c0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .main-image {
+        width:50%;
+        border-radius: 10px;
+        height: auto;
+    }
+    .main-image img {
+        width: 50%; 
+        height: auto; 
+        border-radius: 10px;
+    }
+    
+    .welcome-section, .about-section {
+        padding: 1rem;
+    }
+    
+    .welcome-section-title,
+    .about-section-title {
+        color:#0b0e18;
+        margin-bottom: 0.5rem;
+    }
+    
+    .welcome-section-text,
+    .about-section-text {
+        font-size: 1rem;
+    }
+    
+}
+
+.footer {
+    text-align: center;
+    padding: 3rem;
+    background-color:#596897;
+    color:#ebedf5;
+    margin-top: 2rem;
+    position:relative;
+}
+
+.sampleItemImage {
+    border-radius: 50px;
+    width: 50%;
+    height: auto;
+}
+
+.sample-item-three {
+    width: 100%;
+    margin: 20px auto; 
+    border-radius: 10px;
+}
+
+.sample-item-three img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.sample-item-four {
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.sample-item-four img {
+    width: 50%; 
+    height: auto; 
+    border-radius: 5px;
+}
+.sample-item-seven {
+    width: 100%; 
+    margin: 20px auto; 
+    border-radius: 5px;
+}
+.sample-item-seven img {
+    width: 80%; 
+    height: auto; 
+    border-radius: 5px;
+}
+
+.sample-item-eight {
+    width: 100%;
+    margin: 20px auto; 
+    border-radius: 5px;
+}
+
+.sample-item-eight img {
+    width: 80%; 
+    height: auto; 
+    border-radius: 5px;
+}
+.sample-item-nine {
+    width: 100%; 
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.sample-item-nine img {
+    width: 70%; 
+    height: auto; 
+    border-radius: 5px;
+}
+.zoomImage {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.zoomImage:hover {
+    transform: scale(1.2); /* Enlarges the image to 2 times its original size */
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        justify-content: center; /* Center elements vertically */
+        min-height: 100vh; /* Ensure it takes up the full viewport height */
+        margin: 0; /* Remove default body margin */
+    }
+
+    .s-main-content {
+        display: flex;
+        margin: 0; /* Remove auto margin for central alignment */
+        align-items: center;
+        justify-content: center;
+
+        .main-image {
+            width:100%;
+            border-radius: 10px;
+            height: auto;
+        }
+
+    }
+   
+    .footer {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and(min-width: 600px) {
+
+    .s-main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .g-header {
+        font-size: 1rem;
+        padding: 0.2rem; 
+    }
+
+    .welcome-section-text,
+    .about-section-text {
+        font-size: 0.9rem;
+    }
+
+    .sampleItemImage {
+        width: 90%; 
+    }
+
+    .sample-item-three img,
+    .sample-item-four img,
+    .sample-item-seven img,
+    .sample-item-eight img,
+    .sample-item-nine img {
+        width: 90%;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 3rem;
+        background-color:#596897;
+        color:#ebedf5;
+        margin-top: 2rem;
+        position:relative;
+    }
+}
+
